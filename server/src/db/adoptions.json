@@ -1,0 +1,1 @@
+[{"_id":1,"petId":1,"petName":"Charlie","name":"Petar","contact":"Petrovic","deleted":true},{"_id":2,"petId":"1","petName":"Charlie","name":"Recax","contact":"","deleted":false},{"_id":3,"petId":"1","petName":"Charlie","name":"Recaz","contact":"Kurac","deleted":false},{"_id":4,"petId":"1","petName":"Charlie","name":"asd","contact":"asd","deleted":false}]

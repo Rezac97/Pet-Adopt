@@ -1,0 +1,20 @@
+<br />
+<div class="card" style="width: 15rem" [routerLink]="[pets._id]">
+  <img
+    class="card-img-top"
+    src="{{ pets.image }}"
+    alt="Card image cap"
+    style="width: 15rem; height: 15rem"
+  />
+  <div class="card-body">
+    <h5 class="text-center">{{ pets.name }}</h5>
+    <p class="card-text">
+      Category: {{ pets.category }}
+      <span style="margin-left: 2em"
+        >Sex: {{ pets.sex == "f" ? "female" : "male" }}</span
+      >
+    </p>
+    <p class="text-left">Size: {{ pets.size_kg }} kg</p>
+  </div>
+</div>
+<br />

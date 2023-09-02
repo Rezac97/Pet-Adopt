@@ -1,0 +1,72 @@
+<div style="display: flex; align-items: center">
+  <div>
+    <p style="margin-top: 0.9em; padding-right: 0.5em">Category:</p>
+  </div>
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    (change)="getCategory($event)"
+  >
+    <option selected value="">All</option>
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="other">Other</option>
+  </select>
+
+  <div style="margin-top: 0.9em; padding-right: 0.5em; margin-left: 0.5em">
+    <p>Sex:</p>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio1"
+      value=""
+      (change)="getSex($event)"
+    />
+    <label class="form-check-label" for="inlineRadio1">Any</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio2"
+      value="f"
+      (change)="getSex($event)"
+    />
+    <label class="form-check-label" for="inlineRadio2">Female</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio3"
+      value="m"
+      (change)="getSex($event)"
+    />
+    <label class="form-check-label" for="inlineRadio3">Male</label>
+  </div>
+
+  <div>
+    <p style="margin-top: 0.5em; padding-right: 0.5em">Sort By:</p>
+  </div>
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    (change)="getSort($event)"
+  >
+    <option selected>Open this select menu</option>
+    <option value="name">Name</option>
+    <option value="size_kg">Size kg</option>
+    <option value="all">All</option>
+  </select>
+</div>
+
+<div class="row">
+  <div class="col-3" *ngFor="let item of pets.results">
+    <app-pet-item [pets]="item"></app-pet-item>
+  </div>
+</div>
